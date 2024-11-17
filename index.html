@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style index.css">
+    <title>Início - Projeto</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+          <div class="btn-Nome">
+            <a href="./index.html" style="text-decoration: none;">
+              <button>Projeto</button>
+            </a>
+          </div>
+          <nav class="menu-desktop">
+            <ul>
+              <li><a href="./index.html">Início</a></li>
+              <li><a href="./equipe.html">Equipe</a></li>
+              <li><a href="./tutorial.html">Tutorial</a></li>
+              <li><a href="./problemas.html">Problemas</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <main>
+      <section class="descricao">
+        <h2>Descrição da Trava Eletrônica</h2>
+        <h3>Este projeto utiliza uma <strong>trava eletrônica</strong> controlada por um botão, um servo motor e um Arduino, com o objetivo de permitir a abertura e o fechamento de uma fechadura de forma automatizada.</h3>
+        
+        <p><strong>Sistema é composto por três elementos principais:</strong> </p>
+        
+        <ul>
+            <li><strong>Botão</strong>: O botão é o principal mecanismo de acionamento da trava. Ao ser pressionado, ele envia um sinal ao Arduino, indicando que o sistema deve realizar uma ação, seja para abrir ou fechar a trava.</li>
+            
+            <li><strong>Arduino</strong>: O microcontrolador Arduino é o cérebro do sistema. Ele recebe o sinal do botão, processa a informação e envia comandos para o servo motor. O Arduino é programado para identificar quando o botão foi pressionado e, com base nesse sinal, acionar o servo motor de maneira que a trava seja aberta ou fechada.</li>
+            
+            <li><strong>Servo Motor</strong>: O servo motor é um motor de controle preciso que ajusta a posição de um mecanismo físico (neste caso, a trava). Quando o Arduino envia o comando ao servo, ele gira até uma posição específica, que pode ser a posição de abertura ou de fechamento da trava.</li>
+        </ul>
+        
+        <p>O funcionamento do sistema é simples: ao pressionar o botão, o Arduino ativa o servo motor, que ajusta a posição da trava, permitindo o acesso. Esse processo pode ser repetido, com o botão sendo pressionado novamente para alternar entre as posições de aberto e fechado da fechadura.</p>
+      </section>
+
+        <section class="esquema-conceitual">
+            <h2>Esquema Conceitual</h2>
+            <img src="Captura de tela 2024-11-06 213203.png" alt="Esquema Conceitual do Projeto" class="imagem-esquema">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

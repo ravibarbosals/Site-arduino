@@ -1,0 +1,149 @@
+/* Reset global */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Container principal */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    padding: 1.25rem 4%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+    border-bottom: 2px solid #ff6347; /* Linha de destaque abaixo do cabeçalho */
+}
+
+/* Header */
+header {
+    padding: 1.25rem 4%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s, transform 0.2s;
+}
+
+header a:hover {
+    color: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 1.25rem;
+}
+
+header .btn-contato button,
+header .btn-Nome button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    color: #000000;
+}
+
+header .btn-contato button:hover,
+header .btn-Nome button:hover {
+    box-shadow: 0px 0px 8px #ff6347;
+    background-color: #ff6347;
+}
+
+/* Estilos para o Main */
+main {
+    padding: 2.5rem 4%;
+}
+
+/* Seção do vídeo tutorial */
+.tutorial-video {
+    margin-bottom: 3rem;
+}
+
+.tutorial-video h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Seção de passos */
+.tutorial-steps h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tutorial-steps ol {
+    margin-left: 1.5rem;
+}
+
+.tutorial-steps li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial-steps strong {
+    color: #ff6347;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.25rem 0;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
