@@ -67,6 +67,21 @@
       </section>
   </main>
 
+  <script>
+    const fotos = document.querySelectorAll('.foto-equipe');
+
+    fotos.forEach(foto => {
+        foto.addEventListener('mouseover', () => {
+            foto.style.transform = 'scale(1.1)';
+            foto.style.transition = 'transform 0.3s ease-in-out';
+        });
+
+        foto.addEventListener('mouseout', () => {
+            foto.style.transform = 'scale(1)';
+        });
+    });
+    </script>
+
   <footer>
       <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
   </footer>

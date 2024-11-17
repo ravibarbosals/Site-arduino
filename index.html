@@ -47,15 +47,29 @@
         <p>O funcionamento do sistema é simples: ao pressionar o botão, o Arduino ativa o servo motor, que ajusta a posição da trava, permitindo o acesso. Esse processo pode ser repetido, com o botão sendo pressionado novamente para alternar entre as posições de aberto e fechado da fechadura.</p>
       </section>
 
-        <section class="esquema-conceitual">
-            <h2>Esquema Conceitual</h2>
-            <img src="Captura de tela 2024-11-06 213203.png" alt="Esquema Conceitual do Projeto" class="imagem-esquema">
-        </section>
-    </main>
+    
+    <main>
+      <section class="esquema-conceitual">
+          <h2>Esquema Conceitual</h2>
+          <img src="imagemarduino.jpg" alt="Esquema Conceitual do Projeto" class="imagem-esquema">
+      </section>
+  </main>
+
+  <script>
+      // Seleciona a imagem do esquema
+      const esquemaImagem = document.querySelector('.imagem-esquema');
+
+      // Adiciona evento de clique
+      esquemaImagem.addEventListener('click', () => {
+          alert('Você clicou no esquema conceitual!');
+      });
+  </script> 
 
     <footer>
         <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
-    </footer>
+    </footer> 
+
+  <script src="./JS/scipt.js"></script>
 
 </body>
 </html>
