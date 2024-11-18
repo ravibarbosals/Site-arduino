@@ -1,50 +1,54 @@
-/* Reset global */
+:root {
+    --cor-principal: #ff6347; 
+    --cor-fundo: #f9f9f9; 
+    --cor-texto-principal: #333; 
+    --cor-texto-secundario: #555; 
+    --cor-escuro: #111; 
+    --cor-clara: #fff; 
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
 *,
 *::before,
 *::after {
-    margin: 0; /* Zera o espaçamento padrão */
-    padding: 0; /* Zera o preenchimento padrão */
-    box-sizing: border-box; /* Garantir que o padding e border não afetem as dimensões do elemento */
-    font-family: "Poppins", sans-serif; /* Definir a fonte padrão para a página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Definindo o tamanho base das fontes */
 html {
-    font-size: 16px; /* A base de 16px para facilitar a conversão em rem */
+    font-size: 16px;
 }
 
-/* Estilo do corpo do site */
 body {
-    background-color: #ffffff; /* Cor de fundo branca */
-    color: #333; /* Cor do texto mais escura para contraste */
-    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhorar a leitura */
-    font-size: 1rem; /* Tamanho de fonte baseado na raiz */
-    background-image: url('background-pattern.png'); /* Adiciona um padrão sutil de fundo */
-    background-size: cover; /* Faz o fundo cobrir toda a área */
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    background-image: url('background-pattern.png');
+    background-size: cover;
 }
 
-/* Container principal que envolve o conteúdo */
 .interface {
-    max-width: 1280px; /* Define a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    padding: 0 2rem; /* Adiciona espaçamento interno nas laterais */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Estilo do header (cabeçalho) */
 header {
     padding: 1.25rem 4%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-    border-bottom: 2px solid #ff6347; /* Linha de destaque abaixo do cabeçalho */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ff6347;
 }
 
 header > .interface {
     display: flex;
-    align-items: center;  /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between;  /* Coloca o espaço entre os itens */
-    flex-wrap: wrap;  /* Permite que os itens se reorganizem se não couberem no espaço */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* Logo e links principais dentro do cabeçalho */
 header a {
     color: #fff;
     text-decoration: none;
@@ -52,24 +56,21 @@ header a {
     transition: color 0.2s, transform 0.2s ease-in-out;
 }
 
-/* Hover do link */
 header a:hover {
-    color: #ff6347; /* Cor de destaque ao passar o mouse */
-    transform: scale(1.05);  /* Efeito de aumentar ligeiramente o tamanho */
+    color: #ff6347;
+    transform: scale(1.05);
 }
 
-/* Navegação */
 header nav ul {
     list-style: none;
-    display: flex;  /* Usa Flexbox para alinhar os itens horizontalmente */
-    gap: 1.5rem;  /* Espaçamento entre os itens do menu */
-    margin: 0;  /* Remove a margem padrão */
-    padding: 0;  /* Remove o padding padrão */
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
-/* Itens de navegação (links) */
 header nav ul li {
-    padding: 0;  /* Remove qualquer padding extra */
+    padding: 0;
 }
 
 header .btn-contato button,
@@ -85,155 +86,139 @@ header .btn-Nome button {
     color: #000000;
 }
 
-/* Efeito de hover nos botões */
 header .btn-contato button:hover,
 header .btn-Nome button:hover {
-    box-shadow: 0px 0px 12px rgba(255, 99, 71, 0.6); /* Sombra mais suave */
-    background-color: #ff6347; /* Cor de fundo mais chamativa */
+    box-shadow: 0px 0px 12px rgba(255, 99, 71, 0.6);
+    background-color: #ff6347;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     header > .interface {
-        flex-direction: column;  /* Alinha os itens na vertical para telas menores */
-        align-items: flex-start;  /* Alinha os itens à esquerda */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     header nav ul {
-        flex-direction: column;  /* Coloca os itens do menu em coluna */
-        align-items: flex-start;  /* Alinha os itens à esquerda */
-        width: 100%;  /* Garante que o menu ocupe toda a largura disponível */
-        gap: 1rem;  /* Reduz o espaçamento entre os itens */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1rem;
     }
 
     header .btn-contato button,
     header .btn-Nome button {
-        width: 100%;  /* Faz os botões ocuparem toda a largura disponível em telas menores */
+        width: 100%;
     }
 }
 
-/* Estilo da seção "Descrição do Projeto" */
 .descricao {
-    margin-bottom: 3rem; /* Espaço entre a seção e a próxima */
-    padding: 2rem; /* Adiciona preenchimento interno */
-    background-color: #f9f9f9; /* Cor de fundo clara para destacar a seção */
-    border-radius: 12px; /* Bordas mais arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
-    transition: box-shadow 0.3s ease-in-out; /* Transição suave */
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .descricao:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra quando passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para o título da seção "Descrição do Projeto" */
 .descricao h2 {
-    font-size: 2.2rem; /* Aumenta o tamanho do título */
-    color: #333; /* Cor escura para o título */
-    margin-bottom: 1.5rem; /* Espaço abaixo do título */
-    font-weight: 700; /* Deixa o título mais forte */
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
-/* Estilo para os parágrafos dentro da "Descrição do Projeto" */
 .descricao p {
-    font-size: 1.15rem; /* Aumenta o tamanho da fonte */
-    color: #555; /* Cor do texto um pouco mais clara */
-    line-height: 1.8; /* Aumenta o espaçamento entre as linhas para legibilidade */
-    margin-bottom: 2rem; /* Adiciona mais espaço após os parágrafos */
-    transition: color 0.2s ease; /* Suaviza a transição de cor */
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
 }
 
 .descricao p:hover {
-    color: #ff6347; /* Destaca o parágrafo quando passar o mouse */
+    color: #ff6347;
 }
 
-/* Espaçamento abaixo do <ul> */
 ul {
-    margin-bottom: 2rem; /* Aumenta o espaçamento abaixo de listas */
+    margin-bottom: 2rem;
 }
 
-/* Espaçamento abaixo do <h3> */
 h3 {
-    margin-bottom: 2rem; /* Aumenta o espaçamento abaixo de títulos h3 */
+    margin-bottom: 2rem;
 }
 
-/* Estilo para a seção "Esquema Conceitual" */
 .esquema-conceitual {
-    margin-bottom: auto 0 3rem; /* Espaço entre a seção e a próxima */
-    padding: 2rem; /* Preenchimento interno */
-    background-color: #f9f9f9; /* Cor de fundo clara */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    margin-bottom: auto 0 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     max-width: 960;
 }
 
-/* Estilo do título dentro da seção "Esquema Conceitual" */
 .esquema-conceitual h2 {
-    font-size: 2.2rem; /* Tamanho do título */
-    color: #333; /* Cor do título */
-    margin-bottom: 1.5rem; /* Espaço abaixo do título */
-    font-weight: 700; /* Deixa o título mais forte */
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
-/* Estilo das imagens dentro da seção "Esquema Conceitual" */
 .imagem-esquema {
     display: block;
     margin: 0 auto;
-    width: 100%; /* A imagem ocupa toda a largura do contêiner */
-    max-width: 900px; /* Limita a largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-top: 2rem; /* Espaçamento acima da imagem */
-    margin-bottom: 3rem; /* Maior espaçamento abaixo da imagem */
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
-/* Estilo do rodapé */
 footer {
-    text-align: center; /* Centraliza o texto no rodapé */
-    padding: 1.25rem 0; /* Preenchimento no rodapé */
-    background-color: #111; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto branca */
-    font-size: 0.875rem; /* Tamanho da fonte menor para rodapé */
+    text-align: center;
+    padding: 1.25rem 0;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.875rem;
 }
 
-/* Estilo para links no rodapé */
 footer a {
-    color: #fff; /* Cor do link branca */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Suaviza a transição */
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-/* Efeito de hover nos links do rodapé */
 footer a:hover {
-    color: #ff6347; /* Altera a cor do link quando passa o mouse */
-    text-decoration: underline; /* Adiciona o sublinhado quando em hover */
+    color: #ff6347;
+    text-decoration: underline;
 }
 
-/* Responsividade: Ajustes para telas pequenas */
 @media (max-width: 768px) {
-    /* Ajustes no container principal */
     .interface {
-        padding: 0 1rem; /* Reduz o padding para telas menores */
+        padding: 0 1rem;
     }
 
     header > .interface {
-        flex-direction: column; /* Alinha os itens na vertical */
-        align-items: flex-start; /* Alinha os itens à esquerda */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     header nav ul {
-        flex-direction: column; /* Coloca os itens do menu em coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     header nav ul li {
-        padding: 0.5rem 0; /* Reduz o espaçamento entre os itens */
+        padding: 0.5rem 0;
     }
 
-    /* Ajustes no conteúdo principal */
     main {
-        padding: 2rem 1rem; /* Reduz o padding para telas menores */
+        padding: 2rem 1rem;
     }
     .descricao,
     .esquema-conceitual {
@@ -251,6 +236,7 @@ footer a:hover {
 
     .imagem-esquema {
         max-width: 100%;
-    } 
+    }
+}
 
-} 
+

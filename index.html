@@ -56,14 +56,30 @@
   </main>
 
   <script>
-      // Seleciona a imagem do esquema
-      const esquemaImagem = document.querySelector('.imagem-esquema');
+    
+    const esquemaImagem = document.querySelector('.imagem-esquema');
 
-      // Adiciona evento de clique
-      esquemaImagem.addEventListener('click', () => {
-          alert('Você clicou no esquema conceitual!');
-      });
-  </script> 
+    
+    esquemaImagem.addEventListener('click', () => {
+        alert('Você clicou no esquema conceitual!');
+        esquemaImagem.classList.add('clicked'); 
+    });
+
+    
+    esquemaImagem.addEventListener('dblclick', () => {
+        alert('Você deu um duplo clique na imagem!');
+    });
+
+    
+    const botaoProjeto = document.querySelector('.btn-Nome button');
+    botaoProjeto.addEventListener('focus', () => {
+        botaoProjeto.style.outline = '3px solid #ff6347'; 
+    });
+
+    botaoProjeto.addEventListener('blur', () => {
+        botaoProjeto.style.outline = 'none'; 
+    });
+</script>
 
     <footer>
         <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>

@@ -34,8 +34,8 @@
       <section class="tutorial-video">
         <h1>Como Criar uma Fechadura: Tutorial Completo</h1>
         <div class="video-container">
-            <!-- Coloque seu vídeo no iframe -->
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/seu-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Coloque o vídeo no iframe -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oh-ZLWL7hrQ?si=V2rVtO2s-oK_KiyK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -59,10 +59,37 @@
             <li><strong>Melhorias (opcional):</strong> Adicione funcionalidades como controle via Bluetooth ou smartphone para maior segurança.</li>
         </ol>
     </section>
+    <!-- Seção de Exibição do Código -->
+    <section class="tutorial-code">
+      <h2>Código Fonte Utilizado</h2>
+      <pre><code>
+          // Código Arduino para controle de fechadura
+
+          int relePin = 7; // Definir pino de controle do relé
+          int sensorPin = 8; // Pino do sensor de proximidade
+          int estadoSensor = 0; // Variável para armazenar o estado do sensor
+
+          void setup() {
+              pinMode(relePin, OUTPUT); // Define o pino do relé como saída
+              pinMode(sensorPin, INPUT); // Define o pino do sensor como entrada
+          }
+
+          void loop() {
+              estadoSensor = digitalRead(sensorPin); // Lê o estado do sensor
+
+              if (estadoSensor == HIGH) { // Se o sensor detectar proximidade
+                  digitalWrite(relePin, HIGH); // Aciona o relé (abre a fechadura)
+              } else {
+                  digitalWrite(relePin, LOW); // Desliga o relé (fecha a fechadura)
+              }
+          }
+      </code></pre>
+  </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
+    <script src="JS/scipt.js"></script>
+  </body>
+  </html>

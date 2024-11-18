@@ -1,4 +1,3 @@
-/* Reset global */
 *,
 *::before,
 *::after {
@@ -19,7 +18,6 @@ body {
     font-size: 1rem;
 }
 
-/* Container principal */
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -28,14 +26,8 @@ body {
 
 header {
     padding: 1.25rem 4%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-    border-bottom: 2px solid #ff6347; /* Linha de destaque abaixo do cabeçalho */
-}
-
-/* Header */
-header {
-    padding: 1.25rem 4%;
     background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ff6347;
 }
 
 header > .interface {
@@ -56,7 +48,6 @@ header a:hover {
     transform: scale(1.05);
 }
 
-/* Navegação */
 header nav ul {
     list-style: none;
     display: flex;
@@ -85,12 +76,10 @@ header .btn-Nome button:hover {
     background-color: #ff6347;
 }
 
-/* Estilos para o Main */
 main {
     padding: 2.5rem 4%;
 }
 
-/* Seção do vídeo tutorial */
 .tutorial-video {
     margin-bottom: 3rem;
 }
@@ -109,7 +98,6 @@ main {
     border-radius: 10px;
 }
 
-/* Seção de passos */
 .tutorial-steps h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -129,7 +117,36 @@ main {
     color: #ff6347;
 }
 
-/* Footer */
+.tutorial-code {
+    margin-top: 3rem;
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-code h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.1rem;
+}
+
 footer {
     text-align: center;
     padding: 1.25rem 0;

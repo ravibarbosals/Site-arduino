@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +7,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style problemas.css">
-    <title>PROBLEMAS</title>
+    <title>Problemas Enfrentados e Lições Aprendidas</title>
 </head>
 <body>
     <header>
         <div class="interface">
-          <div class="btn-Nome">
-            <a href="./index.html" style="text-decoration: none;">
-              <button>Projeto</button>
-            </a>
-          </div>
-          <nav class="menu-desktop">
-            <ul>
-              <li><a href="./index.html">Início</a></li>
-              <li><a href="./equipe.html">Equipe</a></li>
-              <li><a href="./tutorial.html">Tutorial</a></li>
-              <li><a href="./problemas.html">Problemas</a></li>
-            </ul>
-          </nav>
+            <div class="btn-Nome">
+                <a href="./index.html" style="text-decoration: none;">
+                    <button>Projeto</button>
+                </a>
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./equipe.html">Equipe</a></li>
+                    <li><a href="./tutorial.html">Tutorial</a></li>
+                    <li><a href="./problemas.html">Problemas</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <footer>
-          <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
-      </footer>
-</body>
-</html>
+    <main>
+        <section class="problemas">
+            <h1>Problemas Enfrentados e Lições Aprendidas</h1>
+            
+            <!-- Descrição dos problemas e lições -->
+            <div class="problema">
+                <h3>Descrição dos principais desafios enfrentados</h3>
+                <p>
+                    Durante o desenvolvimento deste projeto, encontramos vários desafios que nos forçaram a buscar soluções criativas e técnicas. Abaixo, descrevemos alguns dos principais problemas enfrentados:
+                </p>
+                <ul>
+                    <li><strong>Problema 1: Integração de componentes eletrônicos</strong>
+                        <p>Inicialmente, tivemos dificuldades para integrar todos os componentes eletrônicos do sistema, como o Arduino, o relé e a fechadura elétrica. A comunicação entre os módulos estava instável e isso causava falhas intermitentes no acionamento da fechadura.</p>
+                        <p><strong>Solução:</strong> Após vários testes e ajustes nos fios e conexões, conseguimos estabilizar a comunicação entre os módulos e garantir o funcionamento adequado do sistema.</p>
+                    </li>
+                    <li><strong>Problema 2: Configuração do ambiente de desenvolvimento</strong>
+                        <p>Outra dificuldade foi configurar o ambiente de desenvolvimento do Arduino IDE. O software apresentou incompatibilidade com alguns drivers, o que dificultava a comunicação com a placa.</p>
+                        <p><strong>Solução:</strong> Fizemos a atualização do software e dos drivers do Arduino, além de configurar corretamente as portas de comunicação, resolvendo a questão.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="lições">
+                <h2>Lições Aprendidas</h2>
+                <p>
+                    Ao longo do desenvolvimento deste projeto, aprendemos muitas lições valiosas que serão úteis em projetos futuros. Abaixo, destacamos as principais lições aprendidas:
+                </p>
+                <ul>
+                    <li><strong>Lição 1: Planejamento adequado</strong>
+                        <p>Aprendemos que o planejamento é fundamental. Dividir o projeto em etapas claras facilitou o processo de desenvolvimento e permitiu que o time se mantivesse focado.</p>
+                    </li>
+                    <li><strong>Lição 2: Testes contínuos</strong>
+                        <p>Outro ponto importante foi a realização de testes. Testar o codigo frequentemente, mesmo durante as fases iniciais, ajudou a identificar problemas.</p>
+                    </li>
+                    <li><strong>Lição 3: Trabalhar em equipe</strong>
+                        <p>Aprendemos que a comunicação eficaz e a divisão de tarefas são cruciais para o sucesso do projeto. Cada membro da equipe contribuiu com suas habilidades e conhecimentos, o que fez com que o trabalho fosse mais eficiente.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seu Projeto. Todos os direitos reservados.</p>
+    </footer>
+    <script src="JS/scipt.js"></script>
+  </body>
+  </html>

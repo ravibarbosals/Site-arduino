@@ -1,0 +1,24 @@
+#include <Servo.h>
+
+Servo myServo;
+int buttonState = 0;
+int lastButtonState = 0;
+
+void setup() {
+    myServo.attach(9);     
+    pinMode(10, INPUT);
+  	myServo.write(0);
+  	
+}
+
+void loop() {
+    buttonState = digitalRead(10);  
+
+    
+    if (buttonState == HIGH) {
+        myServo.write(90);        
+        delay(5000);               
+        myServo.write(0);           
+    }
+  	  
+}
