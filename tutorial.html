@@ -65,24 +65,28 @@
       <pre><code>
           // Código Arduino para controle de fechadura
 
-          int relePin = 7; // Definir pino de controle do relé
-          int sensorPin = 8; // Pino do sensor de proximidade
-          int estadoSensor = 0; // Variável para armazenar o estado do sensor
+          #include <Servo.h>  // Inclui a biblioteca Servo para controlar o servo motor
 
+          Servo myServo;  // Cria um objeto "myServo" da classe Servo, que será usado para controlar o servo
+          int buttonState = 0;  // Variável para armazenar o estado atual do botão (0 - não pressionado, 1 - pressionado)
+          int lastButtonState = 0;  // Variável para armazenar o estado anterior do botão, usada para detectar mudanças de estado
+            
           void setup() {
-              pinMode(relePin, OUTPUT); // Define o pino do relé como saída
-              pinMode(sensorPin, INPUT); // Define o pino do sensor como entrada
+              myServo.attach(9);  // Conecta o servo ao pino digital 9 do Arduino (pino de controle do servo)
+              pinMode(10, INPUT);  // Configura o pino 10 como uma entrada (onde o botão está conectado)
+              myServo.write(0);  // Define a posição inicial do servo como 0 graus (extremo esquerdo)
           }
-
+            
           void loop() {
-              estadoSensor = digitalRead(sensorPin); // Lê o estado do sensor
-
-              if (estadoSensor == HIGH) { // Se o sensor detectar proximidade
-                  digitalWrite(relePin, HIGH); // Aciona o relé (abre a fechadura)
-              } else {
-                  digitalWrite(relePin, LOW); // Desliga o relé (fecha a fechadura)
-              }
-          }
+              buttonState = digitalRead(10);  // Lê o estado do botão (HIGH se pressionado, LOW se não pressionado)
+            
+                // Verifica se o botão foi pressionado (estado HIGH)
+          if (buttonState == HIGH) {
+              myServo.write(90);  // Move o servo para 90 graus (meia posição)
+              delay(5000);  // Aguarda 5 segundos (5000 milissegundos) enquanto o servo está na posição de 90 graus
+              myServo.write(0);  // Move o servo de volta para 0 graus (extremo esquerdo)
+                }
+            }
       </code></pre>
   </section>
     </main>
